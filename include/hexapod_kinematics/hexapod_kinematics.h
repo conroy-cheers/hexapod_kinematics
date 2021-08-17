@@ -1,14 +1,4 @@
-/*
-* hexapod_kinematics.h
-*
-* Kinematics for a generalised hexapod machine
-* A C++/Eigen port of earlier works by Andrew Kyrychenko & R. Brian Register.
-*
-* License: GPLv2
-*
-* Copyright (c) 2004 All rights reserved.
-*
-*/
+// Copyright (c) 2021 Conroy Cheers
 
 #ifndef HEXAPOD_KINEMATICS__HEXAPOD_KINEMATICS_H_
 #define HEXAPOD_KINEMATICS__HEXAPOD_KINEMATICS_H_
