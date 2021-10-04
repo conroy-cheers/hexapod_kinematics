@@ -85,6 +85,13 @@ std::array<double, NUM_STRUTS> inverse_kinematics(
   const std::array<Eigen::Vector3d, NUM_STRUTS> & base_joint_directions,
   const std::array<Eigen::Vector3d, NUM_STRUTS> & platform_joint_directions);
 
+std::array<Eigen::Vector3d, NUM_STRUTS> get_joint_vectors(
+  const HexapodConfig & config,
+  const Eigen::Vector3d & current_position,
+  const Eigen::Quaterniond & current_orientation);
+
+}
+
 }  // namespace hexkins
 
 #endif  // HEXAPOD_KINEMATICS__HEXAPOD_KINEMATICS_H_

@@ -346,4 +346,26 @@ std::array<double, NUM_STRUTS> inverse_kinematics(
   }
 }
 
+std::array<Eigen::Vector3d, NUM_STRUTS> get_joint_vectors(
+  const HexapodConfig & config,
+  const Eigen::Vector3d & current_position,
+  const Eigen::Quaterniond & current_orientation)
+{
+  Eigen::Vector3d aw;
+  Eigen::Matrix3d RMatrix;
+  std::array<Eigen::Vector3d, NUM_STRUTS> struts;
+
+  /* define Rotation Matrix */
+  RMatrix = current_orientation.toRotationMatrix();
+
+  /* enter for loop to calculate joints (strut lengths) */
+  for (int i = 0; i < NUM_STRUTS; i++) {
+    /* convert location of platform strut end from platform to world coordinates */
+    aw = current_position + (RMatrix * config.platform_joints[i]);
+    struts[i] = aw - config.base_joints[i];
+  }
+
+  return struts;
+}
+
 }  // namespace hexkins
