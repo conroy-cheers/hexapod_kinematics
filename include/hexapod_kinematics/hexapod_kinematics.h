@@ -90,8 +90,6 @@ std::array<Eigen::Vector3d, NUM_STRUTS> get_joint_vectors(
   const Eigen::Vector3d & current_position,
   const Eigen::Quaterniond & current_orientation);
 
-}
-
 }  // namespace hexkins
 
 #endif  // HEXAPOD_KINEMATICS__HEXAPOD_KINEMATICS_H_
