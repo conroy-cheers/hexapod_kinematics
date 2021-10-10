@@ -62,7 +62,7 @@ double strut_length_correction(
 
   /* define base joints axis vectors */
   nb2 = joint_unit_base.cross(StrutVectUnit);
-  nb3 = nb2.cross(nb3);
+  nb3 = StrutVectUnit.cross(nb2);
   nb3.normalize();
 
   /* define platform joints axis vectors */
