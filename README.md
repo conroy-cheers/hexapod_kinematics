@@ -13,4 +13,4 @@ On Ubuntu this can be installed with `sudo apt-get install libeigen3-dev`.
 
 ## Usage
 
-See `test/test_kinematics.cpp` for examples. Actual documentation coming soon.
+See `test/test_kinematics.cpp` for examples.
